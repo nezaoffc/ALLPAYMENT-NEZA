@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment NezaStore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .payment-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s, background 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .payment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .payment-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        .payment-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .payment-details {
+            margin-top: 10px;
+        }
+
+        .payment-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .payment-name {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .channel-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .channel-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .channel-link {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .channel-link:hover {
+            background: #20bd5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .owner-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .owner-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .owner-info {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .owner-number {
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .owner-note {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pembayaran Online</h1>
+            <p class="subtitle">Pilih metode pembayaran yang tersedia</p>
+        </header>
+        
+        <div class="payment-methods">
+            <div class="payment-card">
+                <div class="payment-header">
+                    <div class="payment-icon">💙</div>
+                    <h2 class="payment-title">DANA</h2>
+                </div>
+                <div class="payment-details">
+                    <p class="payment-number">085760854726</p>
+                    <p class="payment-name">GRE* *******</p>
+                </div>
+            </div>
+            
+            <div class="payment-card">
+                <div class="payment-header">
+                    <div class="payment-icon">💚</div>
+                    <h2 class="payment-title">GOPAY</h2>
+                </div>
+                <div class="payment-details">
+                    <p class="payment-number">085760854726</p>
+                    <p class="payment-name">ZA** *******</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="channel-section">
+            <h2 class="channel-title">Saluran Informasi</h2>
+            <p>Bergabunglah dengan saluran WhatsApp kami untuk informasi terbaru</p>
+            <a href="https://whatsapp.com/channel/0029VbAaWheJZg42G67Yw033" target="_blank" class="channel-link">Bergabung dengan Saluran</a>
+        </div>
+        
+        <div class="owner-section">
+            <h2 class="owner-title">Konfirmasi Pembayaran</h2>
+            <p class="owner-info">Setelah melakukan pembayaran, harap kirim bukti transaksi ke:</p>
+            <p class="owner-number">085789458403</p>
+            <p class="owner-note">Pastikan untuk menyertakan nama dan detail pesanan Anda</p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Payment Gateway. Semua hak dilindungi.</p>
+        </footer>
+    </div>
+</body>
+</html>
